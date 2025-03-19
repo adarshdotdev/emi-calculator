@@ -1,54 +1,47 @@
-# React + TypeScript + Vite
+# Loan EMI Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This is a **Loan EMI Calculator** built using **React (Vite)**, **TypeScript**, **Tailwind CSS**, and **ShadCN**. The application allows users to calculate their monthly EMI based on loan amount, interest rate, and tenure. It also visualizes the loan breakup using a donut chart.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Preview](./preview.png)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Real-time EMI Calculation**: Updates EMI as inputs change.
+- **Interactive Sliders & Inputs**: Users can adjust loan amount, interest rate, and tenure.
+- **Dynamic Donut Chart**: Displays the breakup of principal vs. interest.
+- **Modern UI with ShadCN Components**: Provides a clean and responsive design.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend**: React (Vite), TypeScript
+- **Styling**: Tailwind CSS, ShadCN
+- **PieChart**: for visualization
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Installation
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/adarshdotdev/emi-calculator.git
+   cd emi-calculator
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open the app in the browser:
+   ```
+   http://localhost:5173
+   ```
+
+## Usage
+
+1. Use the sliders or input fields to set the **Loan Amount**, **Interest Rate**, and **Loan Tenure**.
+2. The **Monthly EMI** will update in real time.
+3. View the total **Principal**, **Total Interest**, and **Total Amount**.
+4. The donut chart visually represents the interest vs. principal split.
